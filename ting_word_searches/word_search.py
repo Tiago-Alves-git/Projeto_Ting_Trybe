@@ -59,4 +59,3 @@ def search_by_word(word, instance: Queue):
             })
 
     return result
-
