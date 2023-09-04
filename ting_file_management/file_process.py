@@ -22,16 +22,18 @@ def process(path_file, instance: Queue):
     sys.stdout.write(str(new_dict))
 
 
-def remove(instance):
+def remove(instance: Queue):
     """Aqui irá sua implementação"""
+
+    item_removed = instance.dequeue()
+
+    if item_removed is None:
+        print("Não há elementos")
+    else:
+        print(
+          f"Arquivo {item_removed['nome_do_arquivo']} removido com sucesso"
+        )
 
 
 def file_metadata(instance, position):
     """Aqui irá sua implementação"""
-
-
-# {
-#     "nome_do_arquivo": "arquivo_teste.txt", Caminho do arquivo
-#     "qtd_linhas": 3, Quantidade de linhas existentes no arquivo
-#     "linhas_do_arquivo": [...] linhas retornadas pela função do requisito 2
-# }
